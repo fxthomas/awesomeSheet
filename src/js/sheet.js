@@ -223,7 +223,6 @@ var sheet = (function() {
     armorShield.render();
     encumbrance.render();
     size.render();
-    exp.render();
     wealth.render();
     totalBlock.render();
     textBlock.render();
@@ -275,7 +274,6 @@ var sheet = (function() {
     card.bind();
     tip.bind();
     events.bind();
-    exp.bind();
     characterImage.bind();
     pill.bind();
     registerServiceWorker.bind();

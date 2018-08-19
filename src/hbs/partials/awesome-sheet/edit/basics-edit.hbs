@@ -15,6 +15,12 @@
             <input class="m-input-block-field u-full-width js-input-block-field" id="basics-character-name" type="text" tabindex="1">
           </div>
         </div>
+        <div class="m-edit-box-item-100">
+          <div class="m-input-block js-input-block" data-input-block-options="path:basics.character.tagline">
+            <label class="m-input-block-label js-input-block-label" for="basics-character-tagline">Tagline</label>
+            <input class="m-input-block-field u-full-width js-input-block-field" id="basics-character-tagline" type="text" tabindex="1">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -29,23 +35,6 @@
     </div>
     <div class="m-edit-box-body">
       <div class="m-edit-box-content m-edit-box-content-margin-large">
-        <div class="m-edit-box-item-12">
-          <div class="m-select-block js-select-block" data-select-block-options="path:basics.character.alignment">
-            <label class="m-select-block-label js-select-block-label" for="basics-character-alignment">Alignment</label>
-            <select class="m-select-block-dropdown u-full-width js-select-block-dropdown" id="basics-character-alignment" tabindex="1">
-              <option></option>
-              <option value="Lawful Good">Lawful Good</option>
-              <option value="Lawful Neutral">Lawful Neutral</option>
-              <option value="Lawful Evil">Lawful Evil</option>
-              <option value="Neutral Good">Neutral Good</option>
-              <option value="Neutral">Neutral</option>
-              <option value="Neutral Evil">Neutral Evil</option>
-              <option value="Chaotic Good">Chaotic Good</option>
-              <option value="Chaotic Neutral">Chaotic Neutral</option>
-              <option value="Chaotic Evil">Chaotic Evil</option>
-            </select>
-          </div>
-        </div>
         <div class="m-edit-box-item-12">
           <div class="m-select-block js-select-block js-size" data-select-block-options="path:basics.character.size.category">
             <label class="m-select-block-label js-select-block-label" for="basics-character-size-category">Size</label>
@@ -68,12 +57,6 @@
           <div class="m-input-block js-input-block" data-input-block-options="path:basics.character.race">
             <label class="m-input-block-label js-input-block-label" for="basics-character-race">Race</label>
             <input class="m-input-block-field u-full-width js-input-block-field" id="basics-character-race" type="text" tabindex="1">
-          </div>
-        </div>
-        <div class="m-edit-box-item-8">
-          <div class="m-input-block js-input-block" data-input-block-options="path:basics.character.deity">
-            <label class="m-input-block-label js-input-block-label" for="basics-character-deity">Deity</label>
-            <input class="m-input-block-field u-full-width js-input-block-field" id="basics-character-deity" type="text" tabindex="1">
           </div>
         </div>
         <div class="m-edit-box-item-8">
@@ -101,326 +84,33 @@
           </div>
         </div>
         <div class="m-edit-box-item-12 m-edit-box-group">
-          <div class="m-edit-box-item-button-md">
-            <a href="javascript:void(0)" class="u-inline-with-input u-no-margin button button-large button-icon button-block js-input-block-increment" data-input-block-increment-options="target:basics-character-hero-points,action:subtraction" tabindex="1"><span class="icon-remove"></span></a>
-          </div>
           <div class="m-edit-box-item">
-            <div class="m-input-block js-input-block" data-input-block-options="path:basics.character.hero_points,type:integer,minimum:#0,noZero:true">
-              <label class="m-input-block-label js-input-block-label" for="basics-character-hero-points">Hero Points</label>
-              <input class="m-input-block-field u-full-width u-text-center js-input-block-field" id="basics-character-hero-points" type="number" tabindex="1">
+            <div class="m-input-block js-input-block" data-input-block-options="path:basics.karma.total,type:integer,minimum:#0,noZero:true">
+              <label class="m-input-block-label js-input-block-label" for="basics-karma-total">Karma</label>
+              <input class="m-input-block-field u-full-width u-text-center js-input-block-field" id="basics-karma-total" type="number" tabindex="1">
             </div>
           </div>
-          <div class="m-edit-box-item-button-md">
-            <a href="javascript:void(0)" class="u-inline-with-input u-no-margin button button-large button-icon button-block js-input-block-increment" data-input-block-increment-options="target:basics-character-hero-points,action:addition" tabindex="1"><span class="icon-add"></span></a>
+        </div>
+        <div class="m-edit-box-item m-edit-box-group">
+          <div class="m-edit-box-item-check">
+            <div class="m-check-block js-check-block" data-check-block-options="path:basics.senses.emerged">
+              <label class="m-check-block-label" for="basics-senses-emerged">Emerged</label>
+              <input class="m-check-block-check js-check-block-input js-image-background-average" type="checkbox" id="basics-senses-emerged" name="basics-senses-emerged" tabindex="1">
+              <span class="m-check-block-check-icon"></span>
+            </div>
+          </div>
+          <div class="m-edit-box-item-check">
+            <div class="m-check-block js-check-block" data-check-block-options="path:basics.senses.awakened">
+              <label class="m-check-block-label" for="basics-senses-awakened">Awakened</label>
+              <input class="m-check-block-check js-check-block-input js-image-background-average" type="checkbox" id="basics-senses-awakened" name="basics-senses-awakened" tabindex="1">
+              <span class="m-check-block-check-icon"></span>
+            </div>
           </div>
         </div>
         <div class="m-edit-box-item-100">
           <div class="m-textarea-block js-textarea-block" data-textarea-block-options="path:basics.character.description">
             <label class="m-textarea-block-label js-textarea-block-label" for="basics-character-description">Description</label>
             <div id="basics-character-description" class="m-textarea-block-field textarea textarea-large u-full-width js-textarea-block-field" contentEditable="true" tabindex="1"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="m-tab-panel js-tab-panel js-tab-panel-experience is-hidden">
-
-  <div class="m-edit-box m-edit-box-indent m-edit-box-head-small m-edit-box-labels">
-    <div class="m-edit-box-head">
-      <div class="m-edit-box-content m-edit-box-content-nowrap m-edit-box-content-margin-large">
-        <div class="m-edit-box-item-shrink">
-          <h2 class="m-edit-box-title">Experience</h2>
-        </div>
-      </div>
-    </div>
-    <div class="m-edit-box-body">
-
-      <div class="m-edit-box-content m-edit-box-content-margin-large">
-        <div class="m-edit-box-item m-edit-box-group">
-          <div class="m-edit-box-item-total">
-            <p class="m-edit-box-label">Total</p>
-            <p class="m-edit-box-total js-text-block" data-text-block-options="path:basics.experience.total,type:number"></p>
-          </div>
-          <div class="m-edit-box-item">
-            <a href="javascript:void(0)" class="u-inline-with-input u-no-margin button button-large button-icon button-slim js-input-block-aggregate-clear" data-input-block-aggregate-options="target:basics-experience-total,action:clear,snackMessage:Experience cleared.,promptHeading:Clear Experience?,promptMessage:Are you sure you want to clear the current Experience total?"
-              tabindex="1"><span class="icon-close"></span></a>
-          </div>
-        </div>
-        <div class="m-edit-box-item-20 m-edit-box-group">
-          <div class="m-edit-box-item">
-            <div class="m-input-block js-input-block js-input-block-aggregate" data-input-block-aggregate-options="path:basics.experience.total,action:aggregate,eventType:xp,snackMessage:Experience.">
-              <label class="m-input-block-label js-input-block-label" for="basics-experience-total">Experience to add/remove</label>
-              <input id="basics-experience-total" class="m-input-block-field u-full-width u-text-center js-input-block-field js-tip" data-tip-options="message:Use positive numbers to add Experience. Eg: Apply '100' to add 100 EXP. Use negative numbers to remove Experience. Apply '-100' to remove 100 EXP.,state:focus"
-                type="number" tabindex="1">
-            </div>
-          </div>
-          <div class="m-edit-box-item">
-            <a href="javascript:void(0)" class="u-inline-with-input button js-input-block-aggregate-control" data-input-block-aggregate-options="target:basics-experience-total,action:aggregate" tabindex="1">Apply</a>
-          </div>
-        </div>
-        <div class="m-edit-box-item m-edit-box-group">
-          <div class="m-edit-box-item">
-            <a href="javascript:void(0)" class="u-inline-with-input button js-evets-log" data-events-options="type:xp,emptyMessage:No Experience logged yet. Why not add some?,modalHeading:Experience log." tabindex="1">Experience Log</a>
-          </div>
-          <div class="m-edit-box-item">
-            <a href="javascript:void(0)" class="u-inline-with-input u-no-margin button button-large button-icon button-slim js-evets-clear" data-events-options="type:xp,promptHeading:Clear Experience Log?,promptMessage:Are you sure you want to clear the Experience Log? This can not be undone."
-              tabindex="1"><span class="icon-close"></span></a>
-          </div>
-        </div>
-        <div class="m-edit-box-item-4">
-          <div class="m-select-block js-select-block js-advancement-speed" data-select-block-options="path:basics.experience.advancement">
-            <label class="m-select-block-label js-select-block-label" for="basics-experience-advancement">Advancement Speed</label>
-            <select class="m-select-block-dropdown u-full-width js-select-block-dropdown" id="basics-experience-advancement" tabindex="1">
-              <option></option>
-              <option value="Slow">Slow</option>
-              <option value="Medium">Medium</option>
-              <option value="Fast">Fast</option>
-              <option value="Pathfinder Society">Pathfinder Society</option>
-            </select>
-          </div>
-        </div>
-        <div class="m-edit-box-item m-edit-box-group">
-          <div class="m-edit-box-item-total">
-            <p class="m-edit-box-label">Level</p>
-            <p class="m-edit-box-total js-text-block js-tip" data-text-block-options="path:basics.experience.level.current,type:number" data-tip-options="message:Current Level based on Advancement Speed and Total Experience.,state:hover"></p>
-          </div>
-          <div class="m-edit-box-item-total">
-            <p class="m-edit-box-label">Next Level</p>
-            <p class="m-edit-box-total js-text-block js-tip" data-text-block-options="path:basics.experience.next_level,type:number" data-tip-options="message:Total Experience for the next level.,state:hover"></p>
-          </div>
-          <div class="m-edit-box-item-total">
-            <p class="m-edit-box-label">EXP Needed</p>
-            <p class="m-edit-box-total js-text-block js-tip" data-text-block-options="path:basics.experience.needed,type:number" data-tip-options="message:Experience needed to level up.,state:hover"></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="m-edit-box-content">
-        <div class="m-edit-box-item-100">
-          <p class="m-edit-box-description"><strong>Current Level</strong> is based on the chosen <strong>Advancement Speed</strong> and the experience <strong>Total</strong> you have added. <strong>EXP Needed</strong> shows the ammount needed to meet the <strong>Next Level</strong> milestone.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</div>
-
-<div class="m-tab-panel js-tab-panel js-tab-panel-classes is-hidden">
-
-  <div class="m-clone-block js-clone-block-class">
-    <div class="m-edit-controls button-group button-group-right js-clone-controls">
-      <button type="button" class="button button-medium button-secondary button-icon js-clone-add-class" tabindex="1"><span class="icon-add"></span><span class="button-text">Class</span></button>
-      <button type="button" class="button button-medium button-secondary button-icon js-clone-remove" tabindex="1"><span class="icon-close"></span><span class="button-text">Remove</span></button>
-    </div>
-    <div class="m-edit-box m-edit-box-indent m-edit-box-head-small m-edit-box-labels">
-      <div class="m-edit-box-head">
-        <div class="m-edit-box-content m-edit-box-content-nowrap m-edit-box-content-margin-large">
-          <div class="m-edit-box-item-shrink">
-            <h2 class="m-edit-box-title">Classes</h2>
-          </div>
-        </div>
-      </div>
-      <div class="m-edit-box-body">
-
-        <div class="m-placeholder js-placeholder-clone-class">
-          <div class="m-edit-box-content">
-            <div class="m-edit-box-item-100">
-              <p class="m-placeholder-description u-muted-text">Add Classes using <strong class="m-placeholder-key"><span class="icon-add"></span> Class</strong>.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="m-clone-block-target js-clone-block-target js-clone-block-target-class"></div>
-
-        <div class="js-clone-block-suffix-class">
-          <div class="m-edit-box-content m-edit-box-content-margin-large">
-            <div class="m-edit-box-item m-edit-box-group">
-              <div class="m-edit-box-item-total">
-                <p class="m-edit-box-label">Class Total Level</p>
-                <p class="m-edit-box-total js-text-block js-tip" data-text-block-options="path:basics.experience.level.class_total" data-tip-options="message:Total Level from all Classes.,state:hover"></p>
-              </div>
-              <div class="m-edit-box-item-total">
-                <p class="m-edit-box-label">Current Level</p>
-                <p class="m-edit-box-total js-text-block js-tip" data-text-block-options="path:basics.experience.level.current,type:number" data-tip-options="message:Current Level based on Advancement Speed and Total Experience.,state:hover"></p>
-              </div>
-            </div>
-            <div class="m-edit-box-item-total">
-              <p class="m-edit-box-label">HP</p>
-              <p class="m-edit-box-total js-text-block js-tip" data-text-block-options="path:defense.hp.total" data-tip-options="message:Total HP and Favoured HP from all Classes + (CON Bonus x Level).,state:hover"></p>
-            </div>
-            <div class="m-edit-box-item-total">
-              <p class="m-edit-box-label">Ranks</p>
-              <p class="m-edit-box-total js-text-block js-tip" data-text-block-options="path:skills.ranks.total" data-tip-options="message:Total Ranks and Favoured Ranks from all Classes + (INT Bonus x Level).,state:hover"></p>
-            </div>
-            <div class="m-edit-box-item-total">
-              <p class="m-edit-box-label">BAB</p>
-              <p class="m-edit-box-total js-text-block js-tip" data-text-block-options="path:offense.stats.base_attack.string" data-tip-options="message:Total BAB from all Classes.,state:hover"></p>
-            </div>
-            <div class="m-edit-box-item m-edit-box-group">
-              <div class="m-edit-box-item-total">
-                <p class="m-edit-box-label">Base Fortitude</p>
-                <p class="m-edit-box-total js-text-block js-tip" data-text-block-options="path:defense.saves.fortitude.base,type:bonus" data-tip-options="message:Total Base Fortitude from all Classes.,state:hover"></p>
-              </div>
-              <div class="m-edit-box-item-total">
-                <p class="m-edit-box-label">Base Reflex</p>
-                <p class="m-edit-box-total js-text-block js-tip" data-text-block-options="path:defense.saves.reflex.base,type:bonus" data-tip-options="message:Total Base Reflex from all Classes.,state:hover"></p>
-              </div>
-              <div class="m-edit-box-item-total">
-                <p class="m-edit-box-label">Base Will</p>
-                <p class="m-edit-box-total js-text-block js-tip" data-text-block-options="path:defense.saves.will.base,type:bonus" data-tip-options="message:Total Base Will from all Classes.,state:hover"></p>
-              </div>
-            </div>
-          </div>
-          <div class="m-edit-box-content">
-            <div class="m-edit-box-item-100">
-              <p class="m-edit-box-description"><strong>Class Total Level</strong> is the total from all <strong>Classes</strong> listed above. The <strong>Current Level</strong> is defined in the <strong>EXP</strong> Tab.</p>
-              <p class="m-edit-box-description"><strong>HP</strong> is calculated from all <strong>Classes</strong> listed above + (CON Bonus x Level).</p>
-              <p class="m-edit-box-description"><strong>Ranks</strong> is calculated from all <strong>Classes</strong> listed above + (INT Bonus x Level).</p>
-              <p class="m-edit-box-description"><strong>BAB</strong> and the <strong>Base Saves</strong> is calculated from all <strong>Classes</strong> listed above.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="m-tab-panel js-tab-panel js-tab-panel-senses is-hidden">
-
-  <div class="m-edit-box m-edit-box-indent m-edit-box-labels m-edit-box-head-small">
-    <div class="m-edit-box-head">
-      <div class="m-edit-box-content m-edit-box-content-nowrap m-edit-box-content-margin-large">
-        <div class="m-edit-box-item-shrink">
-          <h2 class="m-edit-box-title">Senses</h2>
-        </div>
-      </div>
-    </div>
-    <div class="m-edit-box-body">
-      <div class="m-edit-box-content m-edit-box-content-margin-large">
-        <div class="m-edit-box-item-16">
-          <div class="m-input-block js-input-block" data-input-block-options="path:basics.senses.racial">
-            <label class="m-input-block-label js-input-block-label" for="basics-senses-racial">Racial</label>
-            <input class="m-input-block-field u-full-width js-input-block-field" id="basics-senses-racial" type="text" tabindex="1">
-          </div>
-        </div>
-        <div class="m-edit-box-item-16">
-          <div class="m-input-block js-input-block" data-input-block-options="path:basics.senses.magical">
-            <label class="m-input-block-label js-input-block-label" for="basics-senses-magical">Magical</label>
-            <input class="m-input-block-field u-full-width js-input-block-field" id="basics-senses-magical" type="text" tabindex="1">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="m-tab-panel js-tab-panel js-tab-panel-initiative is-hidden">
-
-  <div class="m-edit-box m-edit-box-indent m-edit-box-head-small m-edit-box-labels js-total-block" data-total-block-options="path:basics.initiative,addition:+misc+temp+feat+trait,bonuses:+str+dex+con+int+wis+cha+level+half_level">
-    <div class="m-edit-box-head">
-      <div class="m-edit-box-content m-edit-box-content-nowrap m-edit-box-content-margin-large">
-        <div class="m-edit-box-item-shrink">
-          <h2 class="m-edit-box-title">Initiative</h2>
-        </div>
-      </div>
-    </div>
-    <div class="m-edit-box-body">
-      <div class="m-edit-box-content m-edit-box-content-margin-large">
-        <div class="m-edit-box-item-36 m-edit-box-group">
-          <div class="m-edit-box-item-total">
-            <p class="m-edit-box-label">Total</p>
-            <p class="m-edit-box-total js-text-block" data-text-block-options="path:basics.initiative.current,type:bonus"></p>
-          </div>
-          <div class="m-edit-box-item">
-            <div class="m-input-block js-input-block" data-input-block-options="path:basics.initiative.feat,type:integer">
-              <label class="m-input-block-label js-input-block-label" for="basics-initiative-feat">Feat</label>
-              <input id="basics-initiative-feat" class="m-input-block-field u-full-width u-text-center js-input-block-field" type="number" tabindex="1">
-            </div>
-          </div>
-          <div class="m-edit-box-item">
-            <div class="m-input-block js-input-block" data-input-block-options="path:basics.initiative.trait,type:integer">
-              <label class="m-input-block-label js-input-block-label" for="basics-initiative-trait">Trait</label>
-              <input id="basics-initiative-trait" class="m-input-block-field u-full-width u-text-center js-input-block-field" type="number" tabindex="1">
-            </div>
-          </div>
-          <div class="m-edit-box-item">
-            <div class="m-input-block js-input-block" data-input-block-options="path:basics.initiative.misc,type:integer">
-              <label class="m-input-block-label js-input-block-label" for="basics-initiative-misc">Misc</label>
-              <input id="basics-initiative-misc" class="m-input-block-field u-full-width u-text-center js-input-block-field" type="number" tabindex="1">
-            </div>
-          </div>
-          <div class="m-edit-box-item">
-            <div class="m-input-block js-input-block" data-input-block-options="path:basics.initiative.temp,type:integer">
-              <label class="m-input-block-label js-input-block-label" for="basics-initiative-temp">Temp</label>
-              <input id="basics-initiative-temp" class="m-input-block-field u-full-width u-text-center js-input-block-field" type="number" tabindex="1">
-            </div>
-          </div>
-          <div class="m-edit-box-item-button-sm">
-            <a href="javascript:void(0)" class="u-inline-with-input u-no-margin button button-secondary button-large button-icon button-thin js-total-block-bonuses" data-total-block-bonuses-options="path:basics.initiative.bonuses,modalHeading:Initiative bonuses"
-              tabindex="1"><span class="icon-more-vertical"></span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="m-tab-panel js-tab-panel js-tab-panel-speed is-hidden">
-
-  <div class="m-edit-box m-edit-box-indent m-edit-box-labels m-edit-box-head-small">
-    <div class="m-edit-box-head">
-      <div class="m-edit-box-content m-edit-box-content-nowrap m-edit-box-content-margin-large">
-        <div class="m-edit-box-item-shrink">
-          <h2 class="m-edit-box-title">Speed</h2>
-        </div>
-      </div>
-    </div>
-    <div class="m-edit-box-body">
-      <div class="m-edit-box-content m-edit-box-content-margin-large">
-        <div class="m-edit-box-item-12">
-          <div class="m-input-block js-input-block" data-input-block-options="path:basics.speed.land">
-            <label class="m-input-block-label js-input-block-label" for="basics-speed-land">Land</label>
-            <input class="m-input-block-field u-full-width js-input-block-field" id="basics-speed-land" type="text" tabindex="1">
-          </div>
-        </div>
-        <div class="m-edit-box-item-12">
-          <div class="m-input-block js-input-block" data-input-block-options="path:basics.speed.swim">
-            <label class="m-input-block-label js-input-block-label" for="basics-speed-swim">Swim</label>
-            <input class="m-input-block-field u-full-width js-input-block-field" id="basics-speed-swim" type="text" tabindex="1">
-          </div>
-        </div>
-        <div class="m-edit-box-item-12">
-          <div class="m-input-block js-input-block" data-input-block-options="path:basics.speed.climb">
-            <label class="m-input-block-label js-input-block-label" for="basics-speed-climb">Climb</label>
-            <input class="m-input-block-field u-full-width js-input-block-field" id="basics-speed-climb" type="text" tabindex="1">
-          </div>
-        </div>
-        <div class="m-edit-box-item-12">
-          <div class="m-input-block js-input-block" data-input-block-options="path:basics.speed.burrow">
-            <label class="m-input-block-label js-input-block-label" for="basics-speed-burrow">Burrow</label>
-            <input class="m-input-block-field u-full-width js-input-block-field" id="basics-speed-burrow" type="text" tabindex="1">
-          </div>
-        </div>
-        <div class="m-edit-box-item-24 m-edit-box-group">
-          <div class="m-edit-box-item">
-            <div class="m-input-block js-input-block" data-input-block-options="path:basics.speed.fly">
-              <label class="m-input-block-label js-input-block-label" for="basics-speed-fly">Fly</label>
-              <input class="m-input-block-field u-full-width js-input-block-field" id="basics-speed-fly" type="text" tabindex="1">
-            </div>
-          </div>
-          <div class="m-edit-box-item">
-            <div class="m-input-block js-input-block" data-input-block-options="path:basics.speed.maneuverability">
-              <label class="m-input-block-label js-input-block-label" for="basics-speed-maneuverability">Maneuverability</label>
-              <input class="m-input-block-field u-full-width js-input-block-field" id="basics-speed-maneuverability" type="text" tabindex="1">
-            </div>
           </div>
         </div>
       </div>

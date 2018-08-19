@@ -29,52 +29,14 @@ var display = (function() {
               node: "h1",
             }
           }, {
-            path: "basics.classes.string",
+            path: "basics.character.tagline",
             element: {
               node: "h2",
             }
           }, {
-            path: "basics.initiative.current",
-            prefix: "Initiative",
-            valueType: "bonus",
-            element: {
-              node: "p",
-            }
-          }, {
-            path: "skills.default.perception.current",
-            prefix: "Perception",
-            valueType: "bonus",
-            element: {
-              node: "p",
-            }
-          }, {
-            path: "basics.speed.land",
-            prefix: "Land Speed",
-            element: {
-              node: "p",
-            }
-          }, {
-            path: "basics.speed.swim",
-            prefix: "Swim Speed",
-            element: {
-              node: "p",
-            }
-          }, {
-            path: "basics.speed.climb",
-            prefix: "Climb Speed",
-            element: {
-              node: "p",
-            }
-          }, {
-            path: "basics.speed.burrow",
-            prefix: "Burrow Speed",
-            element: {
-              node: "p",
-            }
-          }, {
-            path: "basics.speed.fly",
-            prefix: "Fly Speed",
-            dependency: "basics.speed.maneuverability",
+            path: "basics.karma.total",
+            prefix: "Karma",
+            valueType: "number",
             element: {
               node: "p",
             }
@@ -88,23 +50,19 @@ var display = (function() {
             node: "p"
           },
           contentItems: [{
-            path: "basics.senses.racial",
-            prefix: "Racial Senses",
+            path: "basics.senses.emerged",
+            prefix: "Emerged",
+            valueType: "bool",
           }, {
-            path: "basics.senses.magical",
-            prefix: "Magical Senses",
-          }, {
-            path: "basics.character.alignment",
-            prefix: "Alignment"
+            path: "basics.senses.awakened",
+            prefix: "Awakened",
+            valueType: "bool",
           }, {
             path: "basics.character.size.category",
             prefix: "Size"
           }, {
             path: "basics.character.race",
             prefix: "Race"
-          }, {
-            path: "basics.character.deity",
-            prefix: "Deity"
           }, {
             path: "basics.character.gender",
             prefix: "Gender"
@@ -117,13 +75,6 @@ var display = (function() {
           }, {
             path: "basics.character.weight",
             prefix: "Weight"
-          }, {
-            path: "basics.character.hero_points",
-            prefix: "Hero Points"
-          }, {
-            path: "basics.experience.total",
-            valueType: "number",
-            prefix: "EXP"
           }]
         }, {
           type: "block",
@@ -1642,6 +1593,10 @@ var display = (function() {
           });
         };
         return data;
+      },
+      bool: function(data) {
+        if (data) return "Yes";
+        else return "No";
       },
       bonus: function(data) {
         if (data > 0) {
